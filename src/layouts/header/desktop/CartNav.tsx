@@ -23,7 +23,12 @@ export default function CartNav() {
           <span>Cart</span>
         </button>
       </MenuHandler>
-      <MenuList className="min-w-[29rem] max-w-[300px]">
+      <MenuList
+        className="min-w-[29rem] max-w-[300px]"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <div className="w-full h-full py-5">
           <div className="flex items-end justify-between">
             <div className="flex items-end gap-2 px-5">

@@ -30,7 +30,12 @@ export default function UserNav() {
           <span className="font-bold truncate">Usernawdawdawdame</span>
         </button>
       </MenuHandler>
-      <MenuList className="p-5">
+      <MenuList
+        className="p-5"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <Link
           href="8"
           className="flex items-center gap-3 rounded-lg py-2 px-3 btn-hover text-black"
