@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Poppins, Playfair_Display } from "next/font/google";
+import { ScreenSizeProvider } from "@/providers/ScreenSizeProvider";
+import { MountProvider } from "@/providers/MountProvider";
+import { HeaderComponent } from "@/layouts/header/HeaderComponent";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
+  weight: ["900"],
+  variable: "--font-playfair-display",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${playfairDisplay.variable} antialiased w-screen overflow-x-hidden`}
       >
-        {children}
+        <ScreenSizeProvider>
+          <MountProvider>
+            <HeaderComponent />
+            {children}
+          </MountProvider>
+        </ScreenSizeProvider>
       </body>
     </html>
   );

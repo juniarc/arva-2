@@ -31,3 +31,36 @@ export interface Product {
   status: string;
   created_at: string;
 }
+
+export interface CartItem {
+  cart_id: number;
+  user_id: number;
+  product_id: number;
+  product_name: string;
+  category: string;
+  image: string;
+  shop: Shop;
+  selectedVariant: Variant;
+  quantity: number;
+  discount: Discount[];
+  priceAfterDiscount: number;
+  shipping_cost: number;
+}
+
+export interface Shop {
+  shop_id: number;
+  shop_name: string;
+  shop_phone_number: string;
+  shop_email: string;
+  description: string;
+  shop_image: string;
+  created_at: string;
+  shop_address_province: string;
+  shop_address_city: string;
+  shop_address_district: string;
+  shop_address_subdistrict: string;
+  shop_address_street: string;
+  shop_zip_code: number;
+  status: string;
+  user_id: number;
+}

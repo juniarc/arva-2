@@ -4,18 +4,49 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
+  color: black;
+}
+p {
+  color: black;
+}
+main {
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-playfair-display), serif;
+  color: black;
+}
+
+h2 {
+  @apply md:text-3xl lg:text-4xl;
+}
+
+.btn-hover:hover {
+  @apply bg-light-gray rounded md:rounded-lg transition-colors ease-in;
+}
+
+.btn-hover-light:hover {
+  @apply bg-dark-gray/50 rounded md:rounded-lg transition-colors ease-in;
+}
+
+h3 {
+  @apply text-xl md:text-3xl;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

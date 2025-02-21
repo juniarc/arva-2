@@ -1,16 +1,16 @@
-// import Image from "next/image";
-
-import { api } from "@/api/api";
-import ProductItem from "@/components/global/ProductItem";
+import HomeDesktop from "@/containers/home-page/HomeDesktop";
+import HomeMobile from "@/containers/home-page/HomeMobile";
+import HomeWrapper from "@/containers/home-page/HomeWrapper";
+import { cookies } from "next/headers";
 
 export default async function Home() {
-  const req = await api.getAllProducts();
-  console.log(req);
+  const cookiesList = await cookies();
+  const viewport = cookiesList.get("viewport")?.value || undefined;
   return (
-    <div className={`grid gap-5`}>
-      {req.map((product, index) => (
-        <ProductItem {...product} key={index} userId={1} />
-      ))}
-    </div>
+    <HomeWrapper
+      viewport={viewport}
+      mobileHome={<HomeMobile />}
+      desktopHome={<HomeDesktop />}
+    />
   );
 }
