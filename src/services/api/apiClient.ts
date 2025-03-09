@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const publicUrl = axios.create({
-  baseURL: "http://arva-backend-production.up.railway.app",
+  baseURL: "http://capitalist-corliss-revoustudents-ed34d764.koyeb.app",
   headers: {
     "Content-Type": "application/json",
   },
@@ -9,7 +9,7 @@ export const publicUrl = axios.create({
 });
 
 export const privateUrl = axios.create({
-  baseURL: "http://arva-backend-production.up.railway.app",
+  baseURL: "http://capitalist-corliss-revoustudents-ed34d764.koyeb.app",
   // timeout: 10000,
   headers: {
     "Content-Type": "application/json",

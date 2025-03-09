@@ -1,6 +1,6 @@
 import AdsSection from "./ads-section/AdsSection";
 import HomeCategories from "./category-section/CategorySection";
-import ProductSection from "./product-section/ProductSection";
+import ProductSection from "./product-section/ProductSection2";
 
 export default function HomeMobile() {
   return (

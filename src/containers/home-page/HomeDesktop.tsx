@@ -1,6 +1,6 @@
 import AdsSection from "./ads-section/AdsSection";
 import AsideCategory from "./desktop/AsideCategory";
-import ProductSection from "./product-section/ProductSection";
+import ProductSection from "./product-section/ProductSection2";
 
 export default function HomeDesktop() {
   return (

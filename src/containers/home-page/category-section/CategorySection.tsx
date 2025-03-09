@@ -67,7 +67,7 @@ function IconTextLink({
 
 export default function HomeCategories() {
   return (
-    <div className="w-full px-3 md:px-7">
+    <div className="lg:hidden w-full px-3 md:px-7">
       <div className="w-full h-full grid grid-cols-5 gap-1 sm:gap-5 md:gap-3 items-center justify-center rounded-lg shadow-lg bg-white p-3 md:p-5">
         {categoryData.map((item) => (
           <IconTextLink

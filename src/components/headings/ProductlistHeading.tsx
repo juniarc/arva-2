@@ -9,7 +9,7 @@ export default function ProductlistHeading({
 }) {
   return (
     <div className="w-full flex justify-between items-center md:mb-5">
-      <h2>{heading}</h2>
+      <h2 className="capitalize text-xl lg:text-3xl">{heading}</h2>
       <Link href={href} className="underline text-primary text-xs md:text-base">
         See All
       </Link>

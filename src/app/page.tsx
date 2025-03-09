@@ -1,23 +1,21 @@
+import HomeCategories from "@/containers/home-page/category-section/CategorySection";
+import AsideCategory from "@/containers/home-page/desktop/AsideCategory";
 import HeroSection from "@/containers/home-page/hero-section/HeroSection";
-import HomeDesktop from "@/containers/home-page/HomeDesktop";
+import ProductSection from "@/containers/home-page/product-section/ProductSection";
 
 export default function Home() {
-  // const cookiesList = await cookies();
-  // const viewport = cookiesList.get("viewport")?.value || undefined;
-  // return (
-  //   <HomeWrapper
-  //     viewport={viewport}
-  //     mobileHome={<HomeMobile />}
-  //     desktopHome={<HomeDesktop />}
-  //   />
-  // );
-
   return (
     <main className="min-h-screen">
       <section>
         <HeroSection />
       </section>
-      {/* <HomeDesktop /> */}
+      <div className="w-full h-fit lg:px-20 2xl:px-32 lg:flex justify-between items-start gap-5">
+        <HomeCategories />
+        <aside className="hidden lg:block w-1/4 sticky top-0 left-0">
+          <AsideCategory />
+        </aside>
+        <ProductSection />
+      </div>
     </main>
   );
 }
