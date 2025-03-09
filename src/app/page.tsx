@@ -1,3 +1,4 @@
+import HeroSection from "@/containers/home-page/hero-section/HeroSection";
 import HomeDesktop from "@/containers/home-page/HomeDesktop";
 
 export default function Home() {
@@ -11,5 +12,12 @@ export default function Home() {
   //   />
   // );
 
-  return <HomeDesktop />;
+  return (
+    <main className="min-h-screen">
+      <section>
+        <HeroSection />
+      </section>
+      <HomeDesktop />
+    </main>
+  );
 }
