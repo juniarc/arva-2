@@ -7,7 +7,7 @@ export default function SearchBar() {
   const { inputValue, onInputChange, submitSearch } = useSearch();
 
   return (
-    <div className="flex items-center max-w-[500px] w-full h-10">
+    <div className="hidden lg:flex items-center max-w-[500px] w-full h-10">
       <input
         type="text"
         placeholder="Search Arva"

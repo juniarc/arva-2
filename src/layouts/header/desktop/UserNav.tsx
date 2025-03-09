@@ -8,12 +8,7 @@ import Image from "next/image";
 
 export default function UserNav() {
   const [open, setOpen] = useState(false);
-  //   return (
-  //     <button className="flex items-center justify-center gap-2 btn-hover py-1 px-3">
-  //           <UserIcon className="size-5 md:size-[1.875rem]" />
-  //           <span>Login</span>
-  //         </button>
-  //   )
+
   return (
     <Menu open={open} handler={setOpen} placement="bottom-end">
       <MenuHandler>

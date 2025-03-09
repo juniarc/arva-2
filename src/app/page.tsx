@@ -17,7 +17,7 @@ export default function Home() {
       <section>
         <HeroSection />
       </section>
-      <HomeDesktop />
+      {/* <HomeDesktop /> */}
     </main>
   );
 }
