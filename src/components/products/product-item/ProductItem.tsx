@@ -77,11 +77,10 @@ export default function ProductItem({
       )}
       <div className="w-full h-1/2 min-h-[50%] overflow-hidden relative">
         <Image
-          src="https://fastly.picsum.photos/id/826/200/300.jpg?hmac=OsVdvGZW1U_-FFoJfJrFVB-9hw0tx1H9ZyEqEaA1W10"
+          src={firstImageUrl}
           fill
           className="object-cover object-center rounded-t-lg"
           alt="Product Image"
-          priority
         />
       </div>
       <div className="w-full h-full p-3 flex flex-col justify-between gap-1">
