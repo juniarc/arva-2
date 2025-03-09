@@ -23,9 +23,6 @@ export default function Sidebar({
       placement="right"
       size={250}
       transition={{ type: "tween", duration: 0.3 }}
-      placeholder={undefined}
-      onPointerEnterCapture={undefined}
-      onPointerLeaveCapture={undefined}
     >
       <div className="w-full h-full bg-white relative">
         <CloseButton onClose={onCloseDrawer} color="text-white" />

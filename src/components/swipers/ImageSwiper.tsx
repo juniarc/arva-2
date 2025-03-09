@@ -32,13 +32,13 @@ export default function ImageSwiper() {
         {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
             <Link href="/">
-              <div className="w-full aspect-video">
+              <div className="w-full aspect-video relative">
                 <Image
                   src={image}
-                  quality={5}
-                  className="w-full h-full min-h-full object-cover object-center rounded-lg"
+                  className="object-cover object-center rounded-lg"
                   alt="Banner"
                   priority
+                  fill
                 />
               </div>
             </Link>

@@ -75,14 +75,13 @@ export default function ProductItem({
           </span>
         </div>
       )}
-      <div className="w-full h-1/2 min-h-[50%] overflow-hidden">
+      <div className="w-full h-1/2 min-h-[50%] overflow-hidden relative">
         <Image
-          src={firstImageUrl}
-          width={112}
-          height={88}
-          quality={80}
-          className="w-full h-full object-cover object-center rounded-t-lg"
+          src="https://fastly.picsum.photos/id/826/200/300.jpg?hmac=OsVdvGZW1U_-FFoJfJrFVB-9hw0tx1H9ZyEqEaA1W10"
+          fill
+          className="object-cover object-center rounded-t-lg"
           alt="Product Image"
+          priority
         />
       </div>
       <div className="w-full h-full p-3 flex flex-col justify-between gap-1">

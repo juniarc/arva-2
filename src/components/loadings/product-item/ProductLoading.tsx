@@ -5,7 +5,7 @@ import { useScreenSizeContext } from "@/providers/ScreenSizeProvider";
 export default function ProductLoading() {
   const { deviceType } = useScreenSizeContext();
   const skeletonCount =
-    deviceType === "mobile" ? 2 : deviceType === "tablet" ? 3 : 4;
+    deviceType === "mobile" ? 2 : deviceType === "tablet" ? 6 : 8;
   return (
     <div className="mt-3 flex flex-nowrap lg:grid lg:grid-cols-3 2xl:grid-cols-4 gap-3 overflow-x-scroll pb-1 no-scrollbar">
       {Array.from({ length: skeletonCount }).map((_, index) => (

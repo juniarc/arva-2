@@ -54,9 +54,6 @@ export default function CartDrawer({
       placement="right"
       size={size}
       transition={{ type: "tween", duration: 0.3 }}
-      placeholder={undefined}
-      onPointerEnterCapture={undefined}
-      onPointerLeaveCapture={undefined}
     >
       <div className="w-full h-full relative">
         <CloseButton onClose={onCloseDrawer} />

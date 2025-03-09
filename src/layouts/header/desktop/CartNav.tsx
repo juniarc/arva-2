@@ -2,7 +2,6 @@
 
 import { BsHandbag } from "react-icons/bs";
 import { Menu, MenuList, MenuHandler } from "@material-tailwind/react";
-
 import LineDivider from "@/components/dividers/LineDivider";
 import { useState } from "react";
 import Link from "next/link";
@@ -50,6 +49,7 @@ export default function CartNav() {
                     width={90}
                     height={90}
                     className="w-full h-full object-cover object-center rounded-lg"
+                    loading="lazy"
                   />
                 </div>
                 <div className="overflow-hidden w-[70%]">

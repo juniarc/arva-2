@@ -3,7 +3,7 @@ import "./globals.css";
 import { Poppins, Playfair_Display } from "next/font/google";
 import { ScreenSizeProvider } from "@/providers/ScreenSizeProvider";
 import { MountProvider } from "@/providers/MountProvider";
-import { HeaderComponent } from "@/layouts/header/HeaderComponent";
+import HeaderDesktop from "@/layouts/header/desktop/HeaderDesktop";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <ScreenSizeProvider>
           <MountProvider>
-            <HeaderComponent />
+            <HeaderDesktop />
             {children}
           </MountProvider>
         </ScreenSizeProvider>

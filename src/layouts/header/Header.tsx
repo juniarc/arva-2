@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header className="w-full h-fit sticky inset-0 bg-dark-green z-50">
       <div className="w-full flex items-center justify-between py-3 px-5 md:px-7 relative">
-        <Logo image={LogoImage} classname="md:w-[90px] w-[72px]" />
+        <Logo image={LogoImage} />
         <nav>
           <ul className="flex items-start gap-5 text-white">
             <li>

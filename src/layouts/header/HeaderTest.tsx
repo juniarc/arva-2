@@ -1,15 +1,13 @@
-"use client";
-
 import { FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { CiHeart, CiShop } from "react-icons/ci";
 import LogoImage from "@/../public/logos/logo-green.svg";
 import Logo from "@/components/logo/Logo";
-import SearchBar from "./search-bar/SearchBar";
+import SearchBar from "./desktop/search-bar/SearchBar";
 import IconTextLink from "@/components/links/IconTextLink";
-import CartNav from "./CartNav";
-import UserNav from "./UserNav";
+import CartNav from "./desktop/CartNav";
+import UserNav from "./desktop/UserNav";
 
-export default function HeaderDesktop() {
+export default function HeaderTest() {
   return (
     <div>
       <div className="w-full flex items-center gap-5 justify-end bg-primary text-white lg:px-20 2xl:px-32 py-1">
@@ -33,14 +31,14 @@ export default function HeaderDesktop() {
         <div className="w-full h-full flex items-center justify-between lg:px-20 2xl:px-32 gap-5">
           <Logo image={LogoImage} />
           <SearchBar />
-          <div className="flex items-center gap-3 ml-auto">
+          {/* <div className="flex items-center gap-3 ml-auto">
             <IconTextLink href="/wishlist" icon={CiHeart} label="Wishlist" />
 
             <CartNav />
             <div className="w-[1px] h-4 bg-black"></div>
             <IconTextLink href="/my-shop" icon={CiShop} label="My Shop" />
             <UserNav />
-          </div>
+          </div> */}
         </div>
       </header>
     </div>
