@@ -5,9 +5,23 @@ import { UserIcon, ArrowUpTrayIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaRegUser } from "react-icons/fa6";
+import IconTextLink from "@/components/links/IconTextLink";
 
 export default function UserNav() {
   const [open, setOpen] = useState(false);
+
+  const isLogin = true;
+
+  if (isLogin)
+    return (
+      <IconTextLink
+        href="/login"
+        icon={FaRegUser}
+        className="md:text-xl"
+        label="Login"
+      />
+    );
 
   return (
     <Menu open={open} handler={setOpen} placement="bottom-end">

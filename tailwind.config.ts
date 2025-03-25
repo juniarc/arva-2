@@ -13,6 +13,11 @@ module.exports = withMT({
       lg: "1024px",
     },
     extend: {
+      spacing: {
+        "screen-minus-50": "calc(100vh - 50px)",
+        "screen-minus-62": "calc(100vh - 62px)",
+        "screen-minus-120": "calc(100vh - 120px)",
+      },
       fontSize: {
         xxs: "0.625rem",
         xxxs: "0.5rem",

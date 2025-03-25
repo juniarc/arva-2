@@ -7,9 +7,15 @@ interface CategoryLinkProps {
   href: string;
   icon: IconType | StaticImageData;
   label: string;
+  className?: string;
 }
 
-export default function IconTextLink({ href, icon, label }: CategoryLinkProps) {
+export default function IconTextLink({
+  href,
+  icon,
+  label,
+  className,
+}: CategoryLinkProps) {
   return (
     <Link
       href={href}
@@ -18,7 +24,9 @@ export default function IconTextLink({ href, icon, label }: CategoryLinkProps) {
       {typeof icon === "object" ? (
         <Image src={icon} className="size-5 md:size-[1.875rem]" alt={label} />
       ) : (
-        createElement(icon, { className: "text-xl md:text-3xl text-black" })
+        createElement(icon, {
+          className: `text-xl md:text-3xl text-black ${className}`,
+        })
       )}
       <p>{label}</p>
     </Link>

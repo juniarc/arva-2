@@ -64,3 +64,5 @@ export interface Shop {
   status: string;
   user_id: number;
 }
+
+export type Status = "loading" | "error" | "idle" | "success";

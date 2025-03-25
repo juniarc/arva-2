@@ -11,7 +11,7 @@ export default function Home() {
       </section>
       <div className="w-full h-fit lg:px-20 2xl:px-32 lg:flex justify-between items-start gap-5">
         <HomeCategories />
-        <aside className="hidden lg:block w-1/4 sticky top-0 left-0">
+        <aside className="hidden lg:block w-1/4 sticky top-[86px] left-0">
           <AsideCategory />
         </aside>
         <ProductSection />
