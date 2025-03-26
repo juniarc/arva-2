@@ -6,10 +6,16 @@ const uriHelpers = (() => {
 
   const decodeUri = (string: string) => decodeURIComponent(string);
 
+  const extractIdFromUrl = (url: string) => {
+    const idMatch = url.match(/-(\d+)$/);
+    return idMatch ? idMatch[1] : null;
+  };
+
   return {
     formatStringForUrl,
     decodeUri,
     formatUrlToString,
+    extractIdFromUrl,
   };
 })();
 

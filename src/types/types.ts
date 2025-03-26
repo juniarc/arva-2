@@ -66,3 +66,20 @@ export interface Shop {
 }
 
 export type Status = "loading" | "error" | "idle" | "success";
+
+export interface ProductDetail {
+  product_id: number;
+  product_name: string;
+  product_type: string;
+  rating: number | null;
+  category: string;
+  created_at: string;
+  description: string;
+  discount: Discount[];
+  image: { image_data: string; image_id: number }[];
+  shop: Shop;
+  sold: number;
+  status: string;
+  tag: string[];
+  variant: Variant[];
+}

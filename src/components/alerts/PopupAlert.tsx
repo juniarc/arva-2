@@ -23,7 +23,7 @@ export default function PopupAlert({
             unmount: { y: -100 },
           }}
           open={status === "error"}
-          className={`${className} bg-light-red font-semibold border border-red text-red text-sm min-h-9 p-2.5 desktop:w-1/2 shadow-lg flex justify-center`}
+          className={`${className} bg-light-red font-semibold border border-red text-red text-sm min-h-9 p-2.5 shadow-lg flex justify-center`}
         >
           <div className="-mr-12">{errorText}</div>
         </Alert>
@@ -38,7 +38,7 @@ export default function PopupAlert({
           unmount: { y: -100 },
         }}
         open={status === "success"}
-        className={`${className} bg-secondary border border-primary font-semibold text-primary text-sm min-h-9 p-2.5 desktop:w-1/2 shadow-lg flex justify-center`}
+        className={`${className} bg-secondary border border-primary font-semibold text-primary text-sm min-h-9 p-2.5 shadow-lg flex justify-center`}
       >
         <div className="-mr-12">{successText}</div>
       </Alert>
