@@ -15,19 +15,19 @@ export default function ImagesSection({
     setSelectedImage(image_data);
   };
   return (
-    <div className="w-full md:px-[150px]">
+    <div className="w-full md:px-[150px] lg:px-0">
       <div className="w-full aspect-square">
         <Image
           src={selectedImage}
           width={300}
           height={300}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center lg:rounded-lg"
           alt="Product Image"
           priority
           quality={100}
         />
       </div>
-      <div className="w-auto max-w-full overflow-x-scroll flex justify-center gap-2.5 mt-2.5 md:mt-5 px-5">
+      <div className="w-auto max-w-full overflow-x-scroll flex justify-center gap-2.5 mt-2.5 md:mt-8 lg:mt-5 px-5">
         {image.map((item, index) => (
           <button
             onClick={() => handleSelectImage(item.image_data)}

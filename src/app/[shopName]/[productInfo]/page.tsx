@@ -21,16 +21,17 @@ export default async function Page({
 
   if (detailProduct) {
     return (
-      <main className="mb-5">
-        <div>
-          <section>
+      <main className="mb-20 lg:mb-0 lg:px-20 2xl:px-32  lg:py-5">
+        <div className="lg:flex lg:gap-10">
+          <section className="lg:w-1/3">
             <Suspense fallback={<div>Loading...</div>}>
               <ImagesSection image={detailProduct.image} />
             </Suspense>
           </section>
-          <div className="px-5">
+          <div className="lg:w-2/3 px-5 md:px-[150px] lg:px-0">
             <section>
               <ProductInfo
+                product_id={detailProduct.product_id}
                 product_name={detailProduct.product_name}
                 category={detailProduct.category}
                 description={detailProduct.description}
@@ -41,6 +42,7 @@ export default async function Page({
                 ratings={detailProduct.rating}
               />
             </section>
+
             <section>
               <ShopInfo {...detailProduct.shop} />
             </section>

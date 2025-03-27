@@ -5,8 +5,11 @@ import { FaStar, FaLocationDot } from "react-icons/fa6";
 import { checkIsTextClamped } from "@/utils/elementHelpers";
 import { ProductDetail } from "@/types/types";
 import MoreButton from "@/components/buttons/MoreButton";
+import SelectionSection from "./desktop/SelectionSection";
+import { formatPrice } from "@/utils/formatHelpers";
 
 interface ProductInfoProps {
+  product_id: ProductDetail["product_id"];
   product_name: ProductDetail["product_name"];
   category: ProductDetail["category"];
   description: ProductDetail["description"];
@@ -19,6 +22,7 @@ interface ProductInfoProps {
 }
 
 export default function ProductInfo({
+  product_id,
   product_name,
   category,
   description,
@@ -44,11 +48,7 @@ export default function ProductInfo({
 
   const getFormatedPrice = useMemo(() => {
     if (variant?.length !== 0) {
-      return Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        maximumFractionDigits: 0,
-      }).format(variant?.[0].variant_price ?? 0);
+      return formatPrice(variant[0].variant_price);
     }
     return "Rp. 0";
   }, [variant]);
@@ -59,14 +59,16 @@ export default function ProductInfo({
   );
 
   return (
-    <div className="py-5">
+    <div className="py-5 md:py-8 lg:pt-0">
       <div className="w-full">
-        <p className="text-xs text-dark-gray capitalize mb-2.5">{category}</p>
-        <p className="text-2xl font-semibold mb-5">{product_name}</p>
+        <p className="text-xs md:text-sm lg:text-base text-dark-gray capitalize mb-2.5">
+          {category}
+        </p>
+        <p className="text-2xl font-semibold mb-5 capitalize">{product_name}</p>
         <div className="flex items-center gap-2.5 md:gap-5 mb-5">
           <div className="flex items-center gap-2.5">
             <p className="font-bold text-primary text-lg">{getFormatedPrice}</p>
-            <span className="text-dark-gray text-xs tablet:text-sm capitalize">
+            <span className="text-dark-gray text-xs md:text-sm lg:text-base lowercase">
               /{variant[0].variant_unit}
             </span>
           </div>
@@ -76,7 +78,7 @@ export default function ProductInfo({
             </p>
           )}
         </div>
-        <div className="flex items-center text-xs gap-2.5 mb-1">
+        <div className="flex items-center text-xs md:text-sm lg:text-base gap-2.5 mb-1">
           <div className="flex items-center gap-2">
             <FaStar className="text-yellow" />
             <p>{ratings ?? 0}</p>
@@ -84,16 +86,24 @@ export default function ProductInfo({
           <div>|</div>
           <p>{sold} Sold</p>
         </div>
-        <div className="flex items-center gap-2 text-xs text-dark-gray">
+        <div className="flex items-center gap-2 text-xs md:text-sm lg:text-base text-dark-gray">
           <FaLocationDot />
           <p className="capitalize">{shop.shop_address_city}</p>
         </div>
       </div>
+      <SelectionSection
+        product_id={product_id}
+        product_name={product_name}
+        variant={variant}
+        discount={discount}
+        isWishlist={false}
+        wishlistId={1}
+      />
       <div className="mt-5">
-        <h3 className="mb-3">Description</h3>
+        <h2 className="mb-3">Description</h2>
         <p
           ref={descRef}
-          className={`text-xs text-dark-gray leading-5 first-letter:uppercase ${descMoreOpen ? "" : "line-clamp-4"}`}
+          className={`text-xs md:text-sm lg:text-base text-dark-gray leading-5 first-letter:uppercase ${descMoreOpen ? "" : "line-clamp-4"}`}
         >
           {description}
         </p>

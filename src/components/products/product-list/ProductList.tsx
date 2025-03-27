@@ -8,9 +8,11 @@ import { Product } from "@/types/types";
 export default async function ProductList({
   category,
   shopName,
+  className = "lg:grid-cols-3 2xl:grid-cols-4",
 }: {
   category?: string;
   shopName?: string;
+  className?: string;
 }) {
   let products: Product[] | undefined = [];
 
@@ -23,7 +25,9 @@ export default async function ProductList({
   }
 
   return (
-    <div className="mt-3 flex flex-nowrap lg:grid lg:grid-cols-3 2xl:grid-cols-4 gap-3 overflow-x-scroll pb-1 no-scrollbar">
+    <div
+      className={`mt-3 flex flex-nowrap lg:grid gap-3 overflow-x-scroll pb-1 no-scrollbar ${className}`}
+    >
       {products?.map((product, index) => (
         <ProductItem {...product} key={index} />
       ))}

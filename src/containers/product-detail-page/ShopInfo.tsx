@@ -15,7 +15,7 @@ export default function ShopInfo({
 }: ProductDetail["shop"]) {
   const formatedShopNameToUrl = uriHelpers.formatStringForUrl(shop_name);
   return (
-    <div className="flex items-center justify-between lg:justify-normal lg:gap-10 md:px-[150px]">
+    <div className="w-full flex items-center justify-between lg:justify-normal lg:gap-20">
       <div className="flex items-center gap-2.5">
         <div className="size-16">
           <Image
@@ -27,20 +27,20 @@ export default function ShopInfo({
           />
         </div>
         <div className="h-full">
-          <h3 className="font-poppins font-bold capitalize mb-0.5">
+          <h4 className="font-poppins font-bold capitalize mb-0.5">
             {shop_name}
-          </h3>
-          <span className="flex items-center text-xs gap-1 text-dark-gray capitalize mb-0.5">
+          </h4>
+          <span className="flex items-center text-xs md:text-sm gap-1 text-dark-gray capitalize mb-0.5">
             <FaLocationDot /> {shop_address_city}
           </span>
-          <span className="flex items-center text-xs gap-1 text-dark-gray">
+          <span className="flex items-center text-xs md:text-sm gap-1 text-dark-gray">
             <FaStar /> 3.4 (1000)
           </span>
         </div>
       </div>
       <Link
         href={`/${formatedShopNameToUrl}-${shop_id}`}
-        className="bg-gray font-semibold text-xs tablet:text-base py-1 px-2.5 rounded"
+        className="bg-gray font-semibold text-xs md:text-sm py-1 px-2.5 rounded"
       >
         Visit
       </Link>

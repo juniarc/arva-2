@@ -34,21 +34,17 @@ export default function ReviewItem({
           <p className="font-semibold text-sm">{name}</p>
         </div>
         <div className="mt-2 flex items-center gap-2.5">
-          <div className="flex items-center text-gray text-xs tablet:text-base">
+          <div className="flex items-center text-gray text-xs md:text-sm">
             <FaStar className={rating >= 1 ? "text-yellow" : ""} />
             <FaStar className={rating >= 2 ? "text-yellow" : ""} />
             <FaStar className={rating >= 3 ? "text-yellow" : ""} />
             <FaStar className={rating >= 4 ? "text-yellow" : ""} />
             <FaStar className={rating >= 5 ? "text-yellow" : ""} />
           </div>
-          <p className="text-dark-gray text-xs tablet:text-base">
-            {dateTimeAgo}
-          </p>
+          <p className="text-dark-gray text-xs md:text-sm">{dateTimeAgo}</p>
         </div>
       </div>
-      <p className="text-xs mt-2.5 tablet:text-base desktop:text-base">
-        {review}
-      </p>
+      <p className="text-xs mt-2.5 md:text-sm">{review}</p>
     </div>
   );
 }

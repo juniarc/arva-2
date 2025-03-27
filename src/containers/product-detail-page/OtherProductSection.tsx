@@ -18,9 +18,12 @@ export default function OtherProductSection({
   return (
     <div>
       <section className="px-5 lg:px-0 md:px-7 mt-5">
-        <ProductlistHeading href={shopName} heading={`Product from ${name}`} />
+        <ProductlistHeading href={shopName} heading={`Products from ${name}`} />
         <Suspense fallback={<ProductLoading />}>
-          <LazyProductList shopName={shopName} />
+          <LazyProductList
+            shopName={shopName}
+            className="lg:grid-cols-4 2xl:grid-cols-5"
+          />
         </Suspense>
       </section>
       <section className="px-5 lg:px-0 md:px-7 mt-5">
@@ -29,7 +32,10 @@ export default function OtherProductSection({
           heading="Recomendation for you"
         />
         <Suspense fallback={<ProductLoading />}>
-          <LazyProductList category={category} />
+          <LazyProductList
+            category={category}
+            className="lg:grid-cols-4 2xl:grid-cols-5"
+          />
         </Suspense>
       </section>
     </div>

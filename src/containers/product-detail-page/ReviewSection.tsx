@@ -28,8 +28,8 @@ export default function ReviewSection({ reviews }: ReviewSectionProps) {
   return (
     <div className="mt-8">
       <div>
-        <h3>Product Reviews</h3>
-        <div className="flex items-center text-xs gap-2.5 mt-3">
+        <h2>Product Reviews</h2>
+        <div className="flex items-center text-xs md:text-sm gap-2.5 mt-3">
           <span className="flex items-center gap-1 text-sm text-black font-semibold">
             <FaStar className="text-yellow" /> {totalRating}
           </span>
